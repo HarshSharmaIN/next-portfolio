@@ -1,4 +1,5 @@
 import { FaHome } from "react-icons/fa";
+import { FaBriefcase } from "react-icons/fa";
 import { IoMdInformationCircle } from "react-icons/io";
 import { GrProjects } from "react-icons/gr";
 import { MdContacts } from "react-icons/md";
@@ -6,6 +7,7 @@ import { MdContacts } from "react-icons/md";
 export const navItems = [
   { name: "Home", link: "/", icon: <FaHome /> },
   { name: "About", link: "#about", icon: <IoMdInformationCircle /> },
+  { name: "Experience", link: "#experience", icon: <FaBriefcase /> },
   { name: "Projects", link: "#projects", icon: <GrProjects /> },
   { name: "Contact", link: "#contact", icon: <MdContacts /> },
 ];
@@ -74,7 +76,58 @@ export const gridItems = [
   },
 ];
 
-export const projects = [
+export const socialMedia = [
+  {
+    id: 1,
+    img: "/git.svg",
+    link: "https://github.com/HarshSharmaIN",
+  },
+  {
+    id: 2,
+    img: "/insta.svg",
+    link: "https://www.instagram.com/harshsharmaasl/",
+  },
+  {
+    id: 3,
+    img: "/link.svg",
+    link: "https://www.linkedin.com/in/harshsharmaasl/",
+  },
+];
+
+export const experiences = [
+  {
+    id: 1,
+    img: "/pearl.jpeg",
+    title: "Frontend Developer",
+    company: "Pearl Thoughts",
+    duration: "July - August 2024",
+    description:
+      "Built user interfaces for web applications, implemented responsive designs, and collaborated with backend developers to integrate APIs and create seamless user experiences.",
+    technologies: ["React", "JavaScript", "CSS", "HTML"],
+  },
+  {
+    id: 2,
+    img: "digi.png",
+    title: "Frontend Developer Intern",
+    company: "Digiglobe Solutions",
+    duration: "June - July 2024",
+    description:
+      "Assisted in developing client websites, learned modern web development practices, and gained experience with version control and collaborative development workflows.",
+    technologies: ["HTML", "CSS", "JavaScript", "TailwindCSS"],
+  },
+  {
+    id: 3,
+    img: "bcet.jpeg",
+    title: "Computer Science Student",
+    company: "University",
+    duration: "2022 - Present",
+    description:
+      "Studying computer science fundamentals including algorithms, data structures, software engineering principles, and web development technologies.",
+    technologies: ["Java", "Python", "C++", "Database Systems"],
+  },
+];
+
+export const webProjects = [
   {
     id: 3,
     title: "Prescripto - Full Healthcare System",
@@ -109,20 +162,37 @@ export const projects = [
   },
 ];
 
-export const socialMedia = [
+export const appProjects = [
   {
     id: 1,
-    img: "/git.svg",
-    link: "https://github.com/HarshSharmaIN",
+    title: "Shoppy - E-commerce App",
+    des: "A modern e-commerce application with product catalog, cart, secure payments, and order tracking. Built for a smooth shopping experience.",
+    img: "/p5.jpg",
+    iconLists: ["/flutter.svg", "/rzp.png", "/firebase.svg", "/dart.svg"],
+    link: "https://drive.google.com/file/d/1WoXvt3kdKevbfq_kuCaMqa1nkNo3KnrF/view?usp=sharing",
   },
   {
     id: 2,
-    img: "/insta.svg",
-    link: "https://www.instagram.com/harshsharmaasl/",
+    title: "ChatApp - Real-Time Chat",
+    des: "A real-time chat application with Firebase backend, message notifications, and user authentication for seamless communication.",
+    img: "/p7.jpg",
+    iconLists: ["/flutter.svg", "/s.svg", "/firebase.svg", "/bloc.svg"],
+    link: "https://drive.google.com/file/d/1OiBBWXfm69EZ3LNpDjKtAYdZ80uzu4d6/view?usp=sharing",
   },
   {
     id: 3,
-    img: "/link.svg",
-    link: "https://www.linkedin.com/in/harshsharmaasl/",
+    title: "WeatherApp",
+    des: "A weather forecasting app that provides real-time weather updates, location-based forecasts, and intuitive UI for daily usage.",
+    img: "/p8.jpg",
+    iconLists: ["/flutter.svg", "/dart.svg", "/openw.png", "/hive.png"],
+    link: "https://drive.google.com/file/d/1teBHIcGwHuaYYChFH2Vab1jdrlldyYzk/view?usp=sharing",
+  },
+  {
+    id: 4,
+    title: "Chatbot",
+    des: "An AI-powered chatbot using Gemini to solve user queries with speech recognition and text-to-speech functionalities.",
+    img: "/p6.jpg",
+    iconLists: ["/flutter.svg", "/dart.svg", "/tts.svg", "/gemini.svg"],
+    link: "https://drive.google.com/file/d/1IwXLlcBN9FHgBDf1kzS7AsfdZs9ZFFcH/view?usp=sharing",
   },
 ];

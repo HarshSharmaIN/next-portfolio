@@ -9,10 +9,7 @@ import {
 import Link from "next/link";
 import { cn } from "@/utils/cn";
 
-export const FloatingNav = ({
-  navItems,
-  className,
-}) => {
+export const FloatingNav = ({ navItems, className }) => {
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(true);
@@ -66,7 +63,7 @@ export const FloatingNav = ({
               "relative dark:text-neutral-50 items-center  flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
             )}
           >
-              <span className=" text-sm !cursor-pointer">{navItem.name}</span>
+            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
           </Link>
         ))}
       </motion.div>
