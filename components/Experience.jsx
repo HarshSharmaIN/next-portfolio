@@ -5,19 +5,6 @@ import { motion } from "framer-motion";
 import { FaBriefcase, FaGraduationCap, FaUserTie } from "react-icons/fa";
 
 const Experience = () => {
-  const getIcon = (type) => {
-    switch (type) {
-      case "work":
-        return <FaBriefcase className="w-6 h-6" />;
-      case "education":
-        return <FaGraduationCap className="w-6 h-6" />;
-      case "internship":
-        return <FaUserTie className="w-6 h-6" />;
-      default:
-        return <FaBriefcase className="w-6 h-6" />;
-    }
-  };
-
   const getTypeColor = (type) => {
     switch (type) {
       case "work":
@@ -33,13 +20,13 @@ const Experience = () => {
 
   return (
     <div className="py-20" id="experience">
-      <h1 className="heading">
+      <h1 className="heading text-center">
         My <span className="text-purple">Experience</span> Journey
       </h1>
 
       <div className="w-full mt-12 relative">
         {/* Timeline line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple via-blue-500 to-purple rounded-full opacity-30"></div>
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple via-blue-500 to-purple rounded-full opacity-30 hidden md:block"></div>
 
         <div className="relative">
           {experiences.map((experience, index) => (
@@ -48,15 +35,17 @@ const Experience = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`flex items-center w-full mb-12 ${
-                index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+              className={`flex flex-col md:flex-row items-center w-full mb-12 ${
+                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
               {/* Content */}
               <div
-                className={`w-5/12 ${
-                  index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left"
-                }`}
+                className={`w-full md:w-5/12 ${
+                  index % 2 === 0
+                    ? "md:pr-8 md:text-right"
+                    : "md:pl-8 md:text-left"
+                } text-center md:text-inherit`}
               >
                 <motion.div
                   whileHover={{ scale: 1.02 }}
@@ -64,13 +53,15 @@ const Experience = () => {
                 >
                   <div
                     className={`flex items-center gap-3 mb-3 ${
-                      index % 2 === 0 ? "justify-end" : "justify-start"
+                      index % 2 === 0
+                        ? "md:justify-end justify-center"
+                        : "md:justify-start justify-center"
                     }`}
                   >
                     <div
                       className={`rounded-lg bg-gradient-to-r ${getTypeColor(
                         experience.type
-                      )} text-white`}
+                      )} text-white flex items-center justify-center`}
                     >
                       <img src={experience.img} className="w-10 h-10" />
                     </div>
@@ -97,7 +88,9 @@ const Experience = () => {
 
                   <div
                     className={`flex flex-wrap gap-2 ${
-                      index % 2 === 0 ? "justify-end" : "justify-start"
+                      index % 2 === 0
+                        ? "md:justify-end justify-center"
+                        : "md:justify-start justify-center"
                     }`}
                   >
                     {experience.technologies.map((tech, techIndex) => (
@@ -113,7 +106,7 @@ const Experience = () => {
               </div>
 
               {/* Timeline dot */}
-              <div className="w-2/12 flex justify-center">
+              <div className="hidden md:flex w-2/12 justify-center">
                 <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
@@ -125,7 +118,7 @@ const Experience = () => {
               </div>
 
               {/* Empty space for alternating layout */}
-              <div className="w-5/12"></div>
+              <div className="hidden md:block w-5/12"></div>
             </motion.div>
           ))}
         </div>
