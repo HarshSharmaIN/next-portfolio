@@ -34,7 +34,7 @@ function Hero() {
             Hi I&apos;m Harsh, a Web Developer based in India.
           </p>
           <a
-            href="https://drive.google.com/file/d/12tDsXOZG0rW4jQzhcL0EWPmMFmScfLt4/view?usp=sharing"
+            href="https://drive.google.com/file/d/1ktBnrxN09vVstZ6nL5LW-9_l_nC9piVe/view?usp=sharing"
             target="_blank"
           >
             <MagicButton
@@ -50,3 +50,4 @@ function Hero() {
 }
 
 export default Hero;
+
